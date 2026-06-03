@@ -132,3 +132,53 @@
 Должна ли реклама зависеть от содержимого корзины и поведения пользователя?
 Нужно ли отображать общую стоимость всей корзины?
 Должна ли корзина синхронизироваться между устройствами пользователя?
+
+
+## Задание 2: проектирование API
+
+# 1. REST API запрос
+GET /api/v1/partner-stores
+Host: api.petrushka-green.ru
+Content-Type: application/json
+
+# 2. Пример ответа API
+{
+  "stores": [
+    {
+      "id": 1,
+      "name": "METRO",
+      "deliveryType": "scheduled",
+      "deliveryText": "Ближайшая доставка сегодня 21:00-23:00",
+      "logoUrl": "https://cdn.petrushka-green.ru/logos/metro.png",
+      "redirectUrl": "https://online.metro-cc.ru"
+    },
+    {
+      "id": 2,
+      "name": "Ашан",
+      "deliveryType": "scheduled",
+      "deliveryText": "Ближайшая доставка сегодня 18:00-20:00",
+      "logoUrl": "https://cdn.petrushka-green.ru/logos/auchan.png",
+      "redirectUrl": "https://www.auchan.ru"
+    },
+    {
+      "id": 3,
+      "name": "ВкусВилл",
+      "deliveryType": "express",
+      "deliveryText": "Быстрая доставка от 20 до 60 минут",
+      "logoUrl": "https://cdn.petrushka-green.ru/logos/vkusvill.png",
+      "redirectUrl": "https://vkusvill.ru"
+    },
+    {
+      "id": 4,
+      "name": "Виктория",
+      "deliveryType": "scheduled",
+      "deliveryText": "Ближайшая доставка сегодня 17:00-19:00",
+      "logoUrl": "https://cdn.petrushka-green.ru/logos/victoria.png",
+      "redirectUrl": "https://www.victoria-group.ru"
+    }
+  ]
+}
+
+# Примечание: 
+для перехода пользователя на внешний сайт партнера используется поле redirectUrl.
+При нажатии на карточку магазина мобильное приложение открывает ссылку, указанную в данном поле.
